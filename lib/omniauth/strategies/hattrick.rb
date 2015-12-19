@@ -14,6 +14,8 @@ module OmniAuth
         check_token_path: '/oauth/check_token.ashx',
         invalidate_token_path: '/oauth/invalidate_token.ashx'
       }
+
+      uid{ request.params['user_id'] }
     end
   end
 end
