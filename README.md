@@ -1,8 +1,6 @@
 # Omniauth::Hattrick
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/hattrick`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+[Hattrick](https://www.hattrick.org) CHPP OmniAuth Strategy
 
 ## Installation
 
@@ -22,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Tell OmniAuth about this provider.
+
+    Rails.application.config.middleware.use OmniAuth::Builder do
+      provider :hattrick, ENV['HATTRICK_KEY'], ENV['HATTRICK_SECRET']
+    end
+
+`"HATTRICK_KEY"` and `"HATTRICK_SECRET"` should be your CHPP product's consumer key and consumer secret
+
+Next configure your routes
+
+    get 'auth/:provider/callback', to: 'sessions#create'·
+
+## Hash returned
+
+At the moment all that is returned is the token, token secret, user id and username as that is all I think we need.
 
 ## Development
 
@@ -32,7 +44,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-hattrick.
+Bug reports and pull requests are welcome on GitHub at https://github.com/j-dexx/omniauth-hattrick.
 
 
 ## License

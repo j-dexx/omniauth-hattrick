@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>managercompendium.xml</FileName>
+  <Version>1.0</Version>
+  <UserID>8981311</UserID>
+  <FetchedDate>2015-12-19 17:36:36</FetchedDate>
+  <Manager>
+    <UserId>8981311</UserId>
+    <Loginname>Mod-jd</Loginname>
+    <SupporterTier>diamond</SupporterTier>
+    <Language>
+      <LanguageId>2</LanguageId>
+      <LanguageName>English (UK)</LanguageName>
+    </Language>
+    <Country>
+      <CountryId>2</CountryId>
+      <CountryName>England</CountryName>
+    </Country>
+    <Teams>
+      <Team>
+        <TeamId>56004</TeamId>
+        <TeamName>Suits &amp; Sandwiches</TeamName>
+        <Arena>
+          <ArenaId>56004</ArenaId>
+          <ArenaName>Sandwich King Arena</ArenaName>
+        </Arena>
+        <League>
+          <LeagueId>2</LeagueId>
+          <LeagueName>England</LeagueName>
+        </League>
+        <LeagueLevelUnit>
+          <LeagueLevelUnitId>530</LeagueLevelUnitId>
+          <LeagueLevelUnitName>III.14</LeagueLevelUnitName>
+        </LeagueLevelUnit>
+        <Region>
+          <RegionId>251</RegionId>
+          <RegionName>Yorkshire</RegionName>
+        </Region>
+        <YouthTeam>
+          <YouthTeamId>1303469</YouthTeamId>
+          <YouthTeamName>Pyjamas &amp; Paninis</YouthTeamName>
+          <YouthLeague>
+            <YouthLeagueId>560195</YouthLeagueId>
+            <YouthLeagueName>GOM 2nds</YouthLeagueName>
+          </YouthLeague>
+        </YouthTeam>
+      </Team>
+      <Team>
+        <TeamId>242857</TeamId>
+        <TeamName>The Bare Necessities</TeamName>
+        <Arena>
+          <ArenaId>242857</ArenaId>
+          <ArenaName>The Bare Necessities Arena</ArenaName>
+        </Arena>
+        <League>
+          <LeagueId>26</LeagueId>
+          <LeagueName>Scotland</LeagueName>
+        </League>
+        <LeagueLevelUnit>
+          <LeagueLevelUnitId>29984</LeagueLevelUnitId>
+          <LeagueLevelUnitName>V.196</LeagueLevelUnitName>
+        </LeagueLevelUnit>
+        <Region>
+          <RegionId>695</RegionId>
+          <RegionName>Highlands and Islands</RegionName>
+        </Region>
+        <YouthTeam>
+          <YouthTeamId>2323576</YouthTeamId>
+          <YouthTeamName>Mowglis Marauders</YouthTeamName>
+          <YouthLeague>
+            <YouthLeagueId>234012</YouthLeagueId>
+            <YouthLeagueName> Junior Kamp</YouthLeagueName>
+          </YouthLeague>
+        </YouthTeam>
+      </Team>
+    </Teams>
+    <NationalTeamCoach />
+  </Manager>
+</HattrickData>

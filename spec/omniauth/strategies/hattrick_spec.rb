@@ -28,21 +28,31 @@ describe OmniAuth::Strategies::Hattrick do
     it 'should have correct authorize url' do
       expect(subject.options.client_options.authorize_path).to eq('/oauth/authorize.aspx')
     end
-    
-    it 'should have correct authenticate url' do
-      expect(subject.options.client_options.authenticate_path).to eq('/oauth/authenticate.aspx')
-    end
 
     it 'should have correct access token url' do
       expect(subject.options.client_options.access_token_path).to eq('/oauth/access_token.ashx')
     end
+  end
 
-    it 'should have correct check token url' do
-      expect(subject.options.client_options.check_token_path).to eq('/oauth/check_token.ashx')
+
+  describe 'info' do
+    before do
+      allow(subject).to receive(:raw_info).and_return(raw_info_hash)
     end
 
-    it 'should have correct invalidate token url' do
-      expect(subject.options.client_options.invalidate_token_path).to eq('/oauth/invalidate_token.ashx')
+    it 'should return the username' do
+      expect(subject.info[:username]).to eq(raw_info_hash[:username])
     end
+
+    it 'should return the user_id' do
+      expect(subject.info[:user_id]).to eq(raw_info_hash[:user_id])
+    end
+  end
+
+  def raw_info_hash
+    {
+      username: 'Bob_Sunesson',
+      user_id: '773204'
+    }
   end
 end

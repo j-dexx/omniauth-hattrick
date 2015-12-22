@@ -9,13 +9,18 @@ module OmniAuth
         site: 'https://chpp.hattrick.org',
         request_token_path: '/oauth/request_token.ashx',
         authorize_path: '/oauth/authorize.aspx',
-        authenticate_path: '/oauth/authenticate.aspx',
         access_token_path: '/oauth/access_token.ashx',
-        check_token_path: '/oauth/check_token.ashx',
-        invalidate_token_path: '/oauth/invalidate_token.ashx'
       }
 
-      uid{ request.params['user_id'] }
+      uid { raw_info[:user_id] }
+
+      info do
+        raw_info
+      end
+
+      def raw_info
+        @raw_info ||= OmniAuth::Hattrick::XmlParser.new(access_token.get('http://chpp.hattrick.org/chppxml.ashx?file=managercompendium&version=1.0').body).parse 
+      end 
     end
   end
 end
